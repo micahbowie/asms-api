@@ -13,6 +13,6 @@ class Employee < ApplicationRecord
   }
 
   validates :notes, length: { maximum: 500 }
-  # validates :phone,  minimum: 10, maximum: 10, allow_blank: true
+
 
 end
