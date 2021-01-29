@@ -11,12 +11,14 @@ class Manager < ApplicationRecord
      }
  validates_length_of :username, minimum: 5, maximum: 12, allow_blank: false
 
- validates :first_name, format: {
-  with: /[a-zA-Z]+\z/,
-  message: 'no special characters or numbers, only letters'
-}
-validates :last_name, format: {
- with: /[a-zA-Z]+\z/,
- message: 'no special characters or numbers, only letters'
-}
+   validates :first_name, format: {
+    with: /[a-zA-Z]+\z/,
+    message: 'no special characters or numbers, only letters'
+  }
+  validates :last_name, format: {
+   with: /[a-zA-Z]+\z/,
+   message: 'no special characters or numbers, only letters'
+  }
+
+  validates :phone,  minimum: 9, maximum: 9, allow_blank: true }
 end
