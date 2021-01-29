@@ -57,7 +57,6 @@ class Api::V1::ManagersController < ApplicationController
       @manager.destroy
 
       render json: {managerId: @manager.id}
-      end
     end
 
     private
@@ -66,9 +65,9 @@ class Api::V1::ManagersController < ApplicationController
         @manager = Manager.find(params[:id])
     end
 
-      def manager_params
+    def manager_params
         params.require(:manager).permit(:first_name, :last_name, :phone, :email, :username, :password)
-      end
+    end
 
 
 end
