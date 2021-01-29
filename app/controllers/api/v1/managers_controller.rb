@@ -1,24 +1,19 @@
 class Api::V1::ManagersController < ApplicationController
     before_action :set_manager, only: [:show, :edit, :update, :destroy]
-
+    before_action :redirect_if_not_logged_in
 
     def dashboard
       @manager = current_user
-
-
     end
 
 
     def index
       @managers = Manager.all
-
       render json: @managers, status: 200
     end
 
 
     def show
-      # @manager = Manager.find(params[:id])
-
       render json: @manager, status: 200
     end
 
@@ -43,7 +38,6 @@ class Api::V1::ManagersController < ApplicationController
 
 
     def update
-      # @manager = Manager.find(params[:id])
       if @manager.update(manager_params)
         render json: @manager, status: 200
       else
