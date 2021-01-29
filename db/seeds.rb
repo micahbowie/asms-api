@@ -14,3 +14,6 @@ Contact.create( first_name: 'Josh', last_name: 'Gallagan', job_title: 'sales', p
 
 #equipment_items seeds
 EquipmentItem.create( name: 'Panasonic AG-CX350 4K Camcorder',  equipment_type: 'camcorder', manufacture_id: "PCAGCX350", warranty:false , unique_id: "Ath9812", pack_id: 1)
+
+#Pack seeds
+Pack.create( name: 'Atholo Game Pack #1',  notes: 'This pack only has one camcorder in it.', unique_id: "Athpck001")
