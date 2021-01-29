@@ -11,3 +11,6 @@ Employee.create( first_name: 'Josh', last_name: 'Gallagan', job_type: 'sales', p
 Contact.create( first_name: 'Ezekiel', last_name: 'Bowie', job_title: 'editor', phone: 6144312189, email: 'ezekielbowie24@gmail.com', address: "7841 Cobdon Ave, Westerville Ohio 43081", school: "Homeschooled", company: 'Atholo Sports')
 
 Contact.create( first_name: 'Josh', last_name: 'Gallagan', job_title: 'sales', phone: 6146789231, email: 'josh24@gmail.com', address:"123 main st", school:"DACC", company: "Atholo Sports ")
+
+#equipment_items seeds
+EquipmentItem.create( name: 'Panasonic AG-CX350 4K Camcorder',  equipment_type: 'camcorder', manufacture_id: "PCAGCX350", warranty:false , unique_id: "Ath9812", pack_id: 1)

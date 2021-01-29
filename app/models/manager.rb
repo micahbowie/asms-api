@@ -20,5 +20,5 @@ class Manager < ApplicationRecord
    message: 'no special characters or numbers, only letters'
   }
 
-  validates :phone,  minimum: 9, maximum: 9, allow_blank: true }
+  # validates :phone,  minimum: 9, maximum: 9, allow_blank: true
 end
