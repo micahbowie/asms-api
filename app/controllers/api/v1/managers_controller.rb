@@ -1,6 +1,5 @@
 class Api::V1::ManagersController < ApplicationController
     before_action :set_manager, only: [:show, :edit, :update, :destroy]
-    before_action :redirect_if_not_logged_in
 
     def dashboard
       @manager = current_user
