@@ -17,3 +17,6 @@ EquipmentItem.create( name: 'Panasonic AG-CX350 4K Camcorder',  equipment_type: 
 
 #Pack seeds
 Pack.create( name: 'Atholo Game Pack #1',  notes: 'This pack only has one camcorder in it.', unique_id: "Athpck001")
+
+#School seeds
+School.create( name: 'New Aalbany',  notes: 'Does not have a soccer team this year', mascot: "Eagles", athletic_conference: "Ohio Capital Conference", address: "123 main st", county: "Franklin County", phone: 6143456789, school_district: "New Albany School District")

@@ -7,6 +7,7 @@ class CreateContacts < ActiveRecord::Migration[6.0]
       t.string :email
       t.string :address
       t.string :school
+      t.integer :school_id
       t.integer :alt_phone
       t.string :alt_email
       t.string :company

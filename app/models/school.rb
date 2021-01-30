@@ -1,15 +1,15 @@
-class Contact < ApplicationRecord
-  validates_presence_of :first_name, :last_name
+class School < ApplicationRecord
+  has_many :contacts
+  validates_presence_of :name, :phone, :mascot, :athletic_conference, :school_district
 
-  validates :first_name, format: {
+  validates :name, format: {
     with: /[a-zA-Z]+\z/,
     message: 'no special characters or numbers, only letters'
   }
-  validates :last_name, format: {
+  validates :mascot, format: {
    with: /[a-zA-Z]+\z/,
    message: 'no special characters or numbers, only letters'
   }
 
   validates :notes, length: { maximum: 500 }
-
 end
