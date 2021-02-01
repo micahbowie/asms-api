@@ -1,6 +1,6 @@
 
 #Manager seeds
-Manager.create( first_name: 'Micah', last_name: 'Bowie', username: 'micahbowie', phone: 6148097539, email: 'micahbowie20@gmail.com')
+Manager.create( first_name: 'Micah', last_name: 'Bowie', username: 'micahbowie', phone: 6148097539, email: 'micahbowie20@gmail.com', password_digest: "1234")
 
 #Employee seeds
 Employee.create( first_name: 'Ezekiel', last_name: 'Bowie', job_type: 'editor', phone: 6144312189, email: 'ezekielbowie24@gmail.com', age: 15, address:"7841 Cobdon Ave, Westerville Ohio 43081", manager_id: 1, school: "Homeschooled")

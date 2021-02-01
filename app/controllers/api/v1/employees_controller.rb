@@ -13,8 +13,9 @@ class Api::V1::EmployeesController < ApplicationController
   def create
     @employee = Employee.new(employee_params)
     create_and_save_contact
+    @employee.manager_id = 1
     if @employee.save
-      render json: @employee, status: :created, location: @employee, status: 200
+      render json: @employee, status: 200
     else
       render json: @employee.errors, status: :unprocessable_entity
     end
@@ -40,7 +41,7 @@ class Api::V1::EmployeesController < ApplicationController
     end
 
     def employee_params
-      params.require(:employee).permit(:job_type, :first_name, :last_name, :age, :school, :addressphone, :email, :snapchat, :instagram, :linkedin, :major, :career_path, :manager_id, :notes)
+      params.require(:employee).permit(:job_type, :first_name, :last_name, :age, :school, :address, :phone, :email, :snapchat, :instagram, :linkedin, :major, :career_path, :manager_id, :notes)
     end
 
     def create_and_save_contact
